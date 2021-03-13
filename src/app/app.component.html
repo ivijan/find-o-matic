@@ -11,3 +11,5 @@
     </p>
   </app-card>
 </ng-container>
+
+<app-card *ngIf="!posts.length" [card]="{ title: 'Empty list of posts'}"></app-card>
