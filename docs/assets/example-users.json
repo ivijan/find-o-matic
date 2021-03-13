@@ -1,0 +1,172 @@
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 32,
+      "pages": 2,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "data": [{
+    "id": 1254,
+    "name": "GD Test165",
+    "email": "email@gd633gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:00:31.492+05:30",
+    "updated_at": "2021-03-12T04:00:31.492+05:30"
+  }, {
+    "id": 1255,
+    "name": "GD Test693",
+    "email": "email@gd263gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:17:45.374+05:30",
+    "updated_at": "2021-03-12T04:17:45.374+05:30"
+  }, {
+    "id": 1256,
+    "name": "GD Test608",
+    "email": "email@gd463gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:19:26.947+05:30",
+    "updated_at": "2021-03-12T04:19:26.947+05:30"
+  }, {
+    "id": 1257,
+    "name": "GD Test740",
+    "email": "email@gd999gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:21:08.835+05:30",
+    "updated_at": "2021-03-12T04:21:08.835+05:30"
+  }, {
+    "id": 1258,
+    "name": "GD Test626",
+    "email": "email@gd456gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:28:12.179+05:30",
+    "updated_at": "2021-03-12T04:28:12.179+05:30"
+  }, {
+    "id": 1259,
+    "name": "GD Test564",
+    "email": "email@gd779gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:36:43.670+05:30",
+    "updated_at": "2021-03-12T04:36:43.670+05:30"
+  }, {
+    "id": 1260,
+    "name": "GD Test304",
+    "email": "email@gd365gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:37:07.528+05:30",
+    "updated_at": "2021-03-12T04:37:07.528+05:30"
+  }, {
+    "id": 1263,
+    "name": "GD Test82",
+    "email": "email@gd295gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:37:57.644+05:30",
+    "updated_at": "2021-03-12T04:37:57.644+05:30"
+  }, {
+    "id": 1265,
+    "name": "GD Test581",
+    "email": "email@gd604gd.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T04:39:03.850+05:30",
+    "updated_at": "2021-03-12T04:39:03.850+05:30"
+  }, {
+    "id": 1301,
+    "name": "test",
+    "email": "test@123",
+    "gender": "Female",
+    "status": "Inactive",
+    "created_at": "2021-03-12T10:08:46.093+05:30",
+    "updated_at": "2021-03-12T10:08:46.093+05:30"
+  }, {
+    "id": 1314,
+    "name": "Test name",
+    "email": "test-6058@gmail.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T11:50:15.336+05:30",
+    "updated_at": "2021-03-12T11:50:15.336+05:30"
+  }, {
+    "id": 1317,
+    "name": "Test name",
+    "email": "test-6214@gmail.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T13:08:32.071+05:30",
+    "updated_at": "2021-03-12T13:08:32.071+05:30"
+  }, {
+    "id": 1318,
+    "name": "Test name",
+    "email": "test-4788@gmail.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T13:13:56.577+05:30",
+    "updated_at": "2021-03-12T13:13:56.577+05:30"
+  }, {
+    "id": 1326,
+    "name": "test name",
+    "email": "August26@yahoo.com",
+    "gender": "Male",
+    "status": "Active",
+    "created_at": "2021-03-12T14:06:41.915+05:30",
+    "updated_at": "2021-03-12T14:06:41.915+05:30"
+  }, {
+    "id": 1329,
+    "name": "Test name",
+    "email": "test-4415@gmail.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T14:28:24.573+05:30",
+    "updated_at": "2021-03-12T14:28:24.573+05:30"
+  }, {
+    "id": 1330,
+    "name": "Test name",
+    "email": "test-3188@gmail.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T14:30:06.728+05:30",
+    "updated_at": "2021-03-12T14:30:06.728+05:30"
+  }, {
+    "id": 1332,
+    "name": "DJ test",
+    "email": "dj-test@feeney-hegmann.info",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T14:59:38.835+05:30",
+    "updated_at": "2021-03-12T14:59:38.835+05:30"
+  }, {
+    "id": 1410,
+    "name": "testing",
+    "email": "test@email.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T20:12:08.985+05:30",
+    "updated_at": "2021-03-12T20:12:08.985+05:30"
+  }, {
+    "id": 1418,
+    "name": "testing123",
+    "email": "test-1587@email.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T20:21:49.944+05:30",
+    "updated_at": "2021-03-12T20:21:49.944+05:30"
+  }, {
+    "id": 1419,
+    "name": "testing123",
+    "email": "test-3545@email.com",
+    "gender": "Male",
+    "status": "Inactive",
+    "created_at": "2021-03-12T20:22:02.843+05:30",
+    "updated_at": "2021-03-12T20:22:02.843+05:30"
+  }]
+}
