@@ -1,0 +1,35 @@
+<mat-grid-list cols="4"
+  rowHeight="100px">
+  <mat-grid-tile [colspan]="1"
+    [rowspan]="1">
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2"
+    [rowspan]="1">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Assignee</mat-label>
+        <input type="text"
+          matInput
+          [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete"
+          [displayWith]="displayFn"
+          (optionSelected)="onSelectionChanged($event)">
+          <mat-option *ngFor="let option of filteredOptions | async"
+            [value]="option">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"
+    [rowspan]="1">
+    <button mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a delete icon"
+      (click)="onButtonClick()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,13 @@
+<app-navbar [pageTitle]="pageTitle"></app-navbar>
+
+<app-card [card]="{}">
+  <app-autocomplete-search (userSelectedEvent)="userSelected($event)"></app-autocomplete-search>
+</app-card>
+
+<ng-container *ngFor="let post of posts">
+  <app-card [card]="post">
+    <p>
+      {{post.body}}
+    </p>
+  </app-card>
+</ng-container>
