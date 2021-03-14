@@ -1,15 +1,15 @@
-export interface MetaData {
-  pagination: PaginationConfig;
+export interface IMetaData {
+  pagination: IPaginationConfig;
 }
 
-export interface PaginationConfig {
+export interface IPaginationConfig {
   total: number;
   pages: number;
   page: number;
   limit: number;
 }
 
-export interface UserData {
+export interface IUserData {
   id: number;
   name: string;
   email: string;
@@ -19,13 +19,13 @@ export interface UserData {
   updated_at: string;
 }
 
-export interface UsersRequest {
+export interface IUsersRequest {
   code: number;
-  meta: MetaData;
-  data: UserData[];
+  meta: IMetaData;
+  data: IUserData[];
 }
 
-export interface PostData {
+export interface IPostData {
   id: number;
   user_id: number;
   title: string;
@@ -33,8 +33,8 @@ export interface PostData {
   created_at: string;
   updated_at: string;
 }
-export interface PostsRequest {
+export interface IPostsRequest {
   code: number;
-  meta: MetaData;
-  data: PostData[];
+  meta: IMetaData;
+  data: IPostData[];
 }

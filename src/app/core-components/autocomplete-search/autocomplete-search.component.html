@@ -10,8 +10,10 @@
         <mat-label>Assignee</mat-label>
         <input type="text"
           matInput
+          #autoCompleteInput
           [formControl]="myControl"
-          [matAutocomplete]="auto">
+          [matAutocomplete]="auto"
+          (keyup.enter)="onEnterEvent()">
         <mat-autocomplete #auto="matAutocomplete"
           [displayWith]="displayFn"
           (optionSelected)="onSelectionChanged($event)">

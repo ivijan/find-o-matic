@@ -1,15 +1,20 @@
+<!-- Main page navigation bar -->
 <app-navbar [pageTitle]="pageTitle"></app-navbar>
 
+<!-- Show search & autocomplete input field -->
 <app-card [card]="{}">
   <app-autocomplete-search (userSelectedEvent)="userSelected($event)"></app-autocomplete-search>
 </app-card>
 
+<!-- Show all posts from selected user -->
 <ng-container *ngFor="let post of posts">
-  <app-card [card]="post">
+  <app-card [card]="{ title: post.title, name: post.name }">
     <p>
       {{post.body}}
     </p>
   </app-card>
 </ng-container>
 
-<app-card *ngIf="!posts.length" [card]="{ title: 'Empty list of posts'}"></app-card>
+<!-- Show message when posts list is empty -->
+<app-card *ngIf="!posts.length"
+  [card]="{ title: 'Empty list of posts'}"></app-card>
