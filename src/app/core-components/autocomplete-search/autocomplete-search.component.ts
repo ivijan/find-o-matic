@@ -42,10 +42,8 @@ export class AutocompleteSearchComponent implements OnInit {
       }),
       concatMap((name: string) => this.apiCallService.getUserByName(name)),
       map((usersRequest: IUsersRequest) => {
-        if (usersRequest.data.length === 1) {
-          this.showTooltip = true;
-        }
-        return usersRequest.data
+        this.showTooltip = usersRequest.data.length === 1;
+        return usersRequest.data;
       })
     );
   }
@@ -57,16 +55,19 @@ export class AutocompleteSearchComponent implements OnInit {
   onButtonClick() {
     this.myControl.setValue('');
     this.userSelectedEvent.emit('');
+    this.showTooltip = false;
   }
 
   onSelectionChanged(event: MatAutocompleteSelectedEvent) {
     this.userSelectedEvent.emit(event.option.value);
+    this.showTooltip = false;
   }
 
   onEnterEvent() {
     if (this.autocomplete.isOpen && this.autocomplete.options.length === 1) {
       this.myControl.setValue(this.autocomplete.options.first.value);
       this.userSelectedEvent.emit(this.myControl.value);
+      this.showTooltip = false;
       this.autoCompleteTrigger.closePanel();
     }
   }
