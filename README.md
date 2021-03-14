@@ -16,7 +16,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Build command to deploy app to GitHub pages: `ng build --prod --output-path docs --base-href /find-o-matic/`
+Build command to deploy app to GitHub pages: 
+`ng build --prod --output-path docs --base-href /find-o-matic/`
 
 ## Running unit tests
 
