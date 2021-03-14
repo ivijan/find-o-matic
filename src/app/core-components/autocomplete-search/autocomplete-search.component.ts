@@ -30,6 +30,7 @@ export class AutocompleteSearchComponent implements OnInit {
 
   myControl = new FormControl();
   options: Observable<IUserData[]>;
+  showTooltip = false;
 
   constructor(private apiCallService: ApiCallService) {}
 
@@ -40,7 +41,12 @@ export class AutocompleteSearchComponent implements OnInit {
         return typeof value === 'string' ? value : value.name;
       }),
       concatMap((name: string) => this.apiCallService.getUserByName(name)),
-      map((usersRequest: IUsersRequest) => usersRequest.data)
+      map((usersRequest: IUsersRequest) => {
+        if (usersRequest.data.length === 1) {
+          this.showTooltip = true;
+        }
+        return usersRequest.data
+      })
     );
   }
 
