@@ -6,7 +6,7 @@
   <mat-grid-tile [colspan]="2"
     [rowspan]="1">
     <form class="example-form"
-      [matTooltip]="showTooltip ? 'Press enter to select' : null"
+      [matTooltip]="showTooltip && autocomplete.isOpen ? 'Press enter to select' : null"
       matTooltipPosition="left">
       <mat-form-field class="example-full-width">
         <mat-label>Assignee</mat-label>
