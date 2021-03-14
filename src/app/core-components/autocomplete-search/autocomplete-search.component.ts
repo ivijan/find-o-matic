@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { concatMap, map, startWith } from 'rxjs/operators';
 import { UserData, UsersRequest } from '../../api-call/api-call.interface';
 import { ApiCallService } from '../../api-call/api-call.service';
 
@@ -15,36 +15,21 @@ export class AutocompleteSearchComponent implements OnInit {
   @Output() userSelectedEvent = new EventEmitter<string>();
 
   myControl = new FormControl();
-  options: UserData[] = [];
-  filteredOptions: Observable<UserData[]>;
+  options: Observable<UserData[]>;
 
   constructor(private apiCallService: ApiCallService) {}
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
+    this.options = this.myControl.valueChanges.pipe(
       startWith(''),
       map((value) => (typeof value === 'string' ? value : value.name)),
-      map((name) => {
-        this.apiCallService
-          .getUserByName(name)
-          .subscribe((usersRequest: UsersRequest) => {
-            this.options = usersRequest.data;
-          });
-        return name ? this._filter(name) : this.options.slice();
-      })
+      concatMap((name: string) => this.apiCallService.getUserByName(name)),
+      map((usersRequest: UsersRequest) => usersRequest.data)
     );
   }
 
   displayFn(user: UserData): string {
     return user && user.name ? user.name : '';
-  }
-
-  private _filter(name: string): UserData[] {
-    const filterValue = name.toLowerCase();
-
-    return this.options.filter(
-      (option) => option.name.toLowerCase().indexOf(filterValue) === 0
-    );
   }
 
   onButtonClick() {
